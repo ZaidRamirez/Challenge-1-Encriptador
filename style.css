@@ -1,0 +1,222 @@
+/*Importamos la fuente que vamos a utilizar en la web*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+html{
+    font-size: 14px;
+}
+
+/*Estilos generales para la web*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+body{
+    background-color: #F3F5FC;
+}
+
+/*Estilos del encabezado*/
+header{
+    width: 100%;
+    height: 10vh;
+}
+
+h1 img{
+    margin: 2vh 0 0 5vw;
+    width: 4vh;
+}
+
+/*Estilos del cuerpo del documento*/
+form{
+    margin-top: 3vh;
+    width: 100%;
+}
+
+/*Estilos del textarea en donde el usuario va a ingrersar su información*/
+textarea#mensaje{
+    width: 95%;
+    height: 32vh;
+    display: block;
+    margin: 0 auto;
+    background-color: #F3F5FC;
+    border: none;
+    color: #0A3871;
+    font-size: 2rem;
+}
+
+textarea#mensaje::placeholder{
+    color: #0A3871;
+    font-size: 2rem;
+}
+
+/*Estilos del mensaje que se le muestra al usuario sobre letras minusculas y sin acentos*/
+p#info img{
+    width: 14px;
+}
+
+p#info{
+    height: 18px;
+    font-size: 1rem;
+    color: #495057;
+    margin-left: 12px;
+    margin-top: 5px;
+}
+
+/*Estilos de los botones de encriptar y desencriptar*/
+div#buttons{
+    width: 95%;
+    margin: 2vh auto;
+}
+
+div#buttons button{
+    width: 100%;
+    height: 7vh;
+    border-radius: 25px;
+    font-size: 1rem;
+    border: 1px solid #0A3871;
+}
+
+button#btnEncriptar{
+    color: white;
+    background-color: #0A3871;
+    margin-bottom: 2vh;
+}
+
+button#btnDesencriptar{
+    color: #0A3871;
+    background-color: #F3F5FC;
+}
+
+/*Estilos de el espacio en donde el usuario va a recibir el mensaje encriptado o desencriptado*/
+div#resultado{
+    width: 95%;
+    margin: 0 auto 2vh auto;
+    margin-top: 3vh;
+    border-radius: 32px;
+    background: #FFF;
+    box-shadow: 0px 24px 32px -8px #00000014;
+    padding: 2vh 0;
+}
+
+div#resultado p{
+    margin: 1vh auto;
+    width: 80%;
+    text-align: center;
+    word-wrap: break-word;
+    overflow: auto;
+}
+
+div#resultado img{
+    display: none;
+    width: 80%;
+    margin: 22vh auto 0 auto;
+}
+
+/*Estilos del botón para copiar el resultado*/
+div#resultado button#btnCopiarTexto{
+    display: none;
+    margin: 2vh auto;
+    width: 90%;
+    height: 7vh;
+    border-radius: 25px;
+    font-size: 1rem;
+    border: 1px solid #0A3871;
+    color: white;
+    background-color: #0A3871;
+
+}
+
+/*Estilos de los textos en los que se va a ver reflejado el resultado*/
+p#resultadoTitulo{
+    font-size: 2rem;
+    color: #343A40;
+    font-weight: bold;
+}
+
+p#resultadoParrafo{
+    font-size: 1.4rem;
+    color: #495057;
+}
+
+/*Estilos del pie de página*/
+footer{
+    width: 100%;
+    position: absolute;
+    background: #000;
+    bottom: 0;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    padding: 1vh;
+}
+
+/*MEDIAQUERIES*/
+/*Pantallas medianas (tablets)*/
+@media (min-width: 376px){
+    div#buttons button{
+        width: 48%;
+    }
+    button#btnEncriptar{
+        margin-right: 2%;
+    }
+}
+
+/*Pantallas con un alto de pantalla pequeño*/
+@media (min-height:693px){
+    html{
+        font-size: 16px;
+    }
+}
+
+/*Pantallas grandes (computadoras)*/
+@media (min-width: 769px){
+    h1 img{
+        margin: 5vh 0 0 5vw;
+    }
+
+    form{
+        margin-top: 8vh;
+    }
+
+    textarea#mensaje{
+        height: 63vh;
+    }
+
+    textarea#mensaje,
+    p#info,
+    div#buttons{
+        display: block;
+        float: left;
+        width: 50%;
+        margin-left: 15%;
+    }
+
+    div#resultado{
+        position: absolute;
+        top: 1vh;
+        right: 5%;
+        float: right;
+        width: 25%;
+        height: 85vh;
+    }
+
+    div#resultado img{
+        display: block;
+    }
+
+    p#resultadoTitulo{
+        font-size: 1.5rem;
+    }
+
+    p#resultadoParrafo{
+        font-size: 1rem;
+    }
+
+}
